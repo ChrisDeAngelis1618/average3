@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrapper">
+    <form action="javascript:void(calc())">
+        Meas-1<input id="meas-1" type="text">
+        <br>
+        Meas-2<input id="meas-2" type="text">
+        <br>
+        Meas-3<input id="meas-3" type="text">
+        <br>
+        <input type="submit" value="Calculate">
+        <br>
+        Average: <span id="Average"></span>
+    </form>
+</div>
+
+<script>
+    function calc() {
+        var meas1 = Number(document.getElementById('meas-1').value);
+        var meas2 = Number(document.getElementById('meas-2').value);
+        var meas3 = Number(document.getElementById('meas-3').value);
+        var avg = (meas1+meas2+meas3)/3;
+        
+        document.getElementById("Average").innerHTML= avg.toFixed(2);         
+    }
+</script>
+</body>
